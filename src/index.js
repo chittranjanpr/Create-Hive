@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HelloWorld from './components/helloworld.jsx';
+import { Provider } from 'react-redux';
+import Routes from './routes';
+import { store } from './store/_helper/store';
 
 const App = () =>(
-    <div>
-        <HelloWorld />
-    </div>
+    <Provider store={store}>
+        <Routes />
+    </Provider>
+    // <Routes />
 )
 
 ReactDOM.render(

@@ -8,6 +8,9 @@ module.exports = {
         path: path.join(__dirname, '/dist'),
         publicPath: '/'
     },
+    devServer: {
+        historyApiFallback: true,
+    },
     module: {
         rules: [{
             exclude: /node_modules/,
